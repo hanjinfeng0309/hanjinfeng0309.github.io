@@ -103,7 +103,6 @@
 <p><img src="https://s1.ax1x.com/2020/06/07/t2mP56.png" alt=""></p>
 <p>浏览器打开该地址：</p>
 <p><img src="https://s1.ax1x.com/2020/06/07/t2mUZn.png" alt=""></p>
-<p>至此，hexo这个博客框架算是在archlinux下搭建成功了。</p>
 <h3 id="四、新建自己的第一篇博客"><a href="#四、新建自己的第一篇博客" class="headerlink" title="四、新建自己的第一篇博客"></a>四、新建自己的第一篇博客</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo n(ew) <span class="string">"Archlinux搭建Hexo博客"</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://s1.ax1x.com/2020/06/07/t2nlwR.png" alt=""></p>
@@ -115,11 +114,24 @@
 <h3 id="七、重新启动服务并用浏览器打开"><a href="#七、重新启动服务并用浏览器打开" class="headerlink" title="七、重新启动服务并用浏览器打开"></a>七、重新启动服务并用浏览器打开</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://s1.ax1x.com/2020/06/07/t2Mb1f.png" alt=""></p>
+<p>至此，hexo这个博客框架算是在本地搭建成功了，接下来就是把博客到github上去（或者你自己的服务器也行）。</p>
+<h3 id="八、把博客部署到github上去"><a href="#八、把博客部署到github上去" class="headerlink" title="八、把博客部署到github上去"></a>八、把博客部署到github上去</h3><p>1、新建一个仓库，仓库名：<code>github用户名.github.io</code>，<strong>一定要和你的github用户名一样才行！！！</strong></p>
+<p>2、新建好仓库后，先放一边，去<code>Blog</code>目录下安装一个部署插件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p>3、编辑<code>_config.yml</code>，找到<code>deploy</code>一项</p>
+<p><img src="https://s1.ax1x.com/2020/06/07/t2Gplt.png" alt=""></p>
+<p>4、部署</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+
+<p>访问：<code>&lt;username&gt;.github.io</code></p>
+<p><img src="https://s1.ax1x.com/2020/06/07/t2YadO.png" alt=""></p>
+<p><strong>搞定收工</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/07/Archlinux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/" data-id="ckb4px2jv0000nbue52tr5zz8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/07/Archlinux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/" data-id="ckb4rsfcr0000ehue9cs6bvcu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -168,7 +180,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/07/hello-world/" data-id="ckb4px2k00001nbue205k354a" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/07/hello-world/" data-id="ckb4rsfcw0001ehue8yuf0e50" class="article-share-link">Share</a>
       
       
     </footer>
