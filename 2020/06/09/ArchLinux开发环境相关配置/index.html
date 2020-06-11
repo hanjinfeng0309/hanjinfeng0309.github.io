@@ -5,13 +5,17 @@
   
 
   
-  <title>Hexo</title>
+  <title>ArchLinux开发环境相关配置 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="1、Java搜索安装jdk： 12$ sudo pacman -Ss jdk     	&#x2F;&#x2F; 搜索jdk$ sudo pacman -S jdk8-openjdk  	&#x2F;&#x2F;安装openjdk8  查看jdk版本：java -version 查看本机jdk信息：archlinux-java status 切换本机默认jdk版本：archlinux-java set java-8-openjdk 2、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ArchLinux开发环境相关配置">
+<meta property="og:url" content="http://yoursite.com/2020/06/09/ArchLinux%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1、Java搜索安装jdk： 12$ sudo pacman -Ss jdk     	&#x2F;&#x2F; 搜索jdk$ sudo pacman -S jdk8-openjdk  	&#x2F;&#x2F;安装openjdk8  查看jdk版本：java -version 查看本机jdk信息：archlinux-java status 切换本机默认jdk版本：archlinux-java set java-8-openjdk 2、">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-09T00:47:17.000Z">
+<meta property="article:modified_time" content="2020-06-09T00:52:43.311Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -62,9 +66,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-ArchLinux开发环境相关配置" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-ArchLinux开发环境相关配置" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/06/09/ArchLinux%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/" class="article-date">
   <time datetime="2020-06-09T00:47:17.000Z" itemprop="datePublished">2020-06-09</time>
@@ -77,8 +79,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/09/ArchLinux%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/">ArchLinux开发环境相关配置</a>
+    <h1 class="article-title" itemprop="name">
+      ArchLinux开发环境相关配置
     </h1>
   
 
@@ -225,206 +227,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-实体机装ArchLinux" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/06/09/%E5%AE%9E%E4%BD%93%E6%9C%BA%E8%A3%85ArchLinux/" class="article-date">
-  <time datetime="2020-06-09T00:39:49.000Z" itemprop="datePublished">2020-06-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/09/%E5%AE%9E%E4%BD%93%E6%9C%BA%E8%A3%85ArchLinux/">实体机装ArchLinux</a>
-    </h1>
+    <a href="/2020/06/09/%E5%AE%9E%E4%BD%93%E6%9C%BA%E8%A3%85ArchLinux/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">实体机装ArchLinux</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>配置：128G固态+1T机械 8G内存</p>
-<h2 id="1、联网"><a href="#1、联网" class="headerlink" title="1、联网"></a>1、联网</h2><p>有线：<code>dhcpcd</code></p>
-<p>无线：<code>wifi-menu</code></p>
-<p><code>ping baidu.com</code></p>
-<h2 id="2、同步系统时间"><a href="#2、同步系统时间" class="headerlink" title="2、同步系统时间"></a>2、同步系统时间</h2><p><code>timedatectl set-ntp true</code></p>
-<h2 id="3、分区方案"><a href="#3、分区方案" class="headerlink" title="3、分区方案"></a>3、分区方案</h2><p><strong>固态部分：</strong></p>
-<ul>
-<li><code>/boot 1g  /dev/sda1</code></li>
-<li><code>/ 110.2g  /dev/sda2</code></li>
-<li><code>/swap 8g  /dev/sda3</code></li>
-</ul>
-<p><strong>机械部分：</strong></p>
-<ul>
-<li><code>/home 200g   /dev/sdb1</code></li>
-<li><code>/var 150g  /dev/sdb2</code></li>
-<li><code>/media/Downloads 150g  /dev/sdb3</code></li>
-<li><code>/media/Documents 剩下  /dev/sdb4</code></li>
-</ul>
-<p><strong>格式化分区</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mkfs.fat -F32 /dev/sda1</span></span><br><span class="line"><span class="comment"># mkfs.ext4 /dev/sda2</span></span><br><span class="line"><span class="comment"># mkswap /dev/sda3</span></span><br><span class="line"><span class="comment"># swapon /dev/sda3</span></span><br><span class="line"><span class="comment"># mkfs.ext4 /dev/sdb1</span></span><br><span class="line"><span class="comment"># mkfs.ext4 /dev/sdb2</span></span><br><span class="line"><span class="comment"># mkfs.ext4 /dev/sdb3</span></span><br><span class="line"><span class="comment"># mkfs.ext4 /dev/sdb4</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>挂载分区</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mount /dev/sda2/ /mnt  	//一定要先挂载"/"目录</span></span><br><span class="line"><span class="comment"># mkdir /mnt/boot</span></span><br><span class="line"><span class="comment"># mount /dev/sda1/ /mnt/boot</span></span><br><span class="line"><span class="comment"># mkdir /mnt/home</span></span><br><span class="line"><span class="comment"># mount /dev/sdb1/ /mnt/home</span></span><br><span class="line"><span class="comment"># mkdir /mnt/var</span></span><br><span class="line"><span class="comment"># mount /dev/sdb2/ /mnt/var</span></span><br><span class="line"><span class="comment"># mkdir -p /mnt/media/Downloads</span></span><br><span class="line"><span class="comment"># mount /dev/sdb3/ /mnt/media/Downloads </span></span><br><span class="line"><span class="comment"># mkdir /mnt/media/Documents</span></span><br><span class="line"><span class="comment"># mount /dev/sdb4/ /mnt/media/Documents</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="4、更换国内源"><a href="#4、更换国内源" class="headerlink" title="4、更换国内源"></a>4、更换国内源</h2><p><code>vim /etc/pacman.d/mirrorlist</code>把中国源放到顶部</p>
-<p>推荐华为云镜像(清华镜像容易崩)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## 华为</span><br><span class="line">Server &#x3D; https:&#x2F;&#x2F;mirrors.huaweicloud.com&#x2F;archlinux&#x2F;$repo&#x2F;os&#x2F;$arch</span><br></pre></td></tr></table></figure>
-
-<h2 id="5、安装基本包"><a href="#5、安装基本包" class="headerlink" title="5、安装基本包"></a>5、安装基本包</h2><p><code>pacstrap /mnt base base-devel linux linux-firmware vi vim dhcpcd</code></p>
-<h2 id="6、-生成fstab"><a href="#6、-生成fstab" class="headerlink" title="6、 生成fstab"></a>6、 生成fstab</h2><p><code>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</code></p>
-<h2 id="7、查看fstab"><a href="#7、查看fstab" class="headerlink" title="7、查看fstab"></a>7、查看fstab</h2><p><code>cat /mnt/etc/fstab</code></p>
-<h2 id="8、移交控制权"><a href="#8、移交控制权" class="headerlink" title="8、移交控制权"></a>8、移交控制权</h2><p><code>arch-chroot /mnt</code></p>
-<h2 id="9、设置时区"><a href="#9、设置时区" class="headerlink" title="9、设置时区"></a>9、设置时区</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># ln -sf &#x2F;usr&#x2F;share&#x2F;zoneinfo&#x2F;Asia&#x2F;Shanghai &#x2F;etc&#x2F;localtime</span><br><span class="line"># hwclock --systohc</span><br></pre></td></tr></table></figure>
-
-<h2 id="10、修改语言配置文件"><a href="#10、修改语言配置文件" class="headerlink" title="10、修改语言配置文件"></a>10、修改语言配置文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> vim /etc/locale.gen</span></span><br><span class="line">把下面几行的注释去掉</span><br><span class="line"><span class="meta">#</span><span class="bash">en_US.UTF-8 UTF-8</span></span><br><span class="line"><span class="meta">#</span><span class="bash">zh_CN.UTF-8 UTF-8</span></span><br><span class="line"><span class="meta">#</span><span class="bash">zh_HK.UTF-8 UTF-8</span></span><br><span class="line"><span class="meta">#</span><span class="bash">zh_TW.UTF-8 UTF-8</span></span><br><span class="line">运行以下代码进行生成</span><br><span class="line"><span class="meta">#</span><span class="bash"> locale-gen</span></span><br><span class="line">编辑locale.conf</span><br><span class="line"><span class="meta">#</span><span class="bash"> vim /etc/locale.conf</span></span><br><span class="line">第一行输入：</span><br><span class="line">LANG=en_US.UTF-8</span><br></pre></td></tr></table></figure>
-
-<h2 id="11、编辑主机名"><a href="#11、编辑主机名" class="headerlink" title="11、编辑主机名"></a>11、编辑主机名</h2><p><code>vim /etc/hostname</code> 第一行写入主机的名字<code>hanjinfeng</code></p>
-<h2 id="12、-编辑hosts"><a href="#12、-编辑hosts" class="headerlink" title="12、 编辑hosts"></a>12、 编辑hosts</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># vim &#x2F;etc&#x2F;hosts</span><br><span class="line"></span><br><span class="line">127.0.0.1 localhost</span><br><span class="line">::1 localhost</span><br><span class="line">127.0.0.1 hanjinfeng.domain hanjinfeng</span><br></pre></td></tr></table></figure>
-
-<h2 id="13、为root设置一个密码"><a href="#13、为root设置一个密码" class="headerlink" title="13、为root设置一个密码"></a>13、为root设置一个密码</h2><p><code>passwd</code></p>
-<h2 id="14、安装一些重要的软件包"><a href="#14、安装一些重要的软件包" class="headerlink" title="14、安装一些重要的软件包"></a>14、安装一些重要的软件包</h2><p><code>pacman -S dialog netctl net-tools wpa_supplicant networkmanager intel-ucode</code></p>
-<h2 id="15、安装grub引导"><a href="#15、安装grub引导" class="headerlink" title="15、安装grub引导"></a>15、安装grub引导</h2><p><code>pacman -S grub efibootmgr</code></p>
-<h2 id="16、创建grub引导"><a href="#16、创建grub引导" class="headerlink" title="16、创建grub引导"></a>16、创建grub引导</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># mkdir &#x2F;boot&#x2F;grub</span><br><span class="line"># grub-mkconfig &gt; &#x2F;boot&#x2F;grub&#x2F;grub.cfg</span><br><span class="line"># grub-install --target&#x3D;x86_64-efi --efi-directory&#x3D;&#x2F;boot</span><br></pre></td></tr></table></figure>
-
-<h2 id="17、重启"><a href="#17、重启" class="headerlink" title="17、重启"></a>17、重启</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">退出arch-chroot</span><br><span class="line"># exit </span><br><span class="line">解除挂载</span><br><span class="line"># umount &#x2F;mnt&#x2F;boot</span><br><span class="line"># umount &#x2F;mnt&#x2F;home</span><br><span class="line"># umount &#x2F;mnt&#x2F;var</span><br><span class="line"># umount &#x2F;mnt&#x2F;media&#x2F;Downloads</span><br><span class="line"># umount &#x2F;mnt&#x2F;media&#x2F;Documents</span><br><span class="line"># umount &#x2F;mnt</span><br><span class="line">重启，拔掉U盘</span><br></pre></td></tr></table></figure>
-
-<h2 id="18、创建普通用户以普通用户登录"><a href="#18、创建普通用户以普通用户登录" class="headerlink" title="18、创建普通用户以普通用户登录"></a>18、创建普通用户以普通用户登录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># useradd -m -G wheel hanwei &#x2F;&#x2F; 记得先用root登录并联好网</span><br><span class="line">设置密码</span><br><span class="line"># passwd hanwei</span><br><span class="line">为普通用户添加sudo权限</span><br><span class="line"># vim &#x2F;etc&#x2F;sudoers</span><br><span class="line">把 #%wheel ALL&#x3D;(ALL) ALL注释去掉</span><br><span class="line"># exit</span><br><span class="line">退出以普通用户登录</span><br></pre></td></tr></table></figure>
-
-<h2 id="19、安装nvidia闭源驱动"><a href="#19、安装nvidia闭源驱动" class="headerlink" title="19、安装nvidia闭源驱动"></a>19、安装nvidia闭源驱动</h2><p><code>sudo pacman -S nvidia lib32-nvidia-utils</code></p>
-<h2 id="20、安装xorg"><a href="#20、安装xorg" class="headerlink" title="20、安装xorg"></a>20、安装xorg</h2><p><code>sudo pacman -S xorg xorg-xrandr</code></p>
-<h2 id="21、安装中文字体"><a href="#21、安装中文字体" class="headerlink" title="21、安装中文字体"></a>21、安装中文字体</h2><p><code>sudo pacman -S ttf-dejavu wqy-microhei</code></p>
-<h2 id="22、安装kde桌面"><a href="#22、安装kde桌面" class="headerlink" title="22、安装kde桌面"></a>22、安装kde桌面</h2><p><code>sudo pacman -S plasma kde-applications packagekit-qt5</code></p>
-<h2 id="23、安装图形登录界面"><a href="#23、安装图形登录界面" class="headerlink" title="23、安装图形登录界面"></a>23、安装图形登录界面</h2><p><code>sudo pacman -S sddm sddm-kcm</code></p>
-<h2 id="24、开机自启sddm服务"><a href="#24、开机自启sddm服务" class="headerlink" title="24、开机自启sddm服务"></a>24、开机自启sddm服务</h2><p><code>sudo systemctl enable sddm</code></p>
-<p>若kde出现崩溃现象：<code>kde ××× 非正常关闭了</code></p>
-<p>解决办法：重启plasma</p>
-<p><code>killall plasmashell &amp;&amp; kstart5 plasmashell</code>或者<code>kquitapp5 plasmashell &amp;&amp; kstart5 plasmashell</code></p>
-<h2 id="25、开机自启网络服务"><a href="#25、开机自启网络服务" class="headerlink" title="25、开机自启网络服务"></a>25、开机自启网络服务</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl <span class="built_in">enable</span> NetworkManager</span><br><span class="line">$ sudo systemctl <span class="built_in">enable</span> dhcpcd</span><br></pre></td></tr></table></figure>
-
-<h2 id="26、安装声音软件包"><a href="#26、安装声音软件包" class="headerlink" title="26、安装声音软件包"></a>26、安装声音软件包</h2><p><code>sudo pacman -S alsa-utils pulseaudio pulseaudio-alsa</code></p>
-<h2 id="27、激活桌面语言设定"><a href="#27、激活桌面语言设定" class="headerlink" title="27、激活桌面语言设定"></a>27、激活桌面语言设定</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ vim &#x2F;home&#x2F;hanwei&#x2F;.xprofile</span><br><span class="line"></span><br><span class="line">export LANG&#x3D;zh_CN.UTF-8</span><br><span class="line">export LC_ALL&#x3D;zh_CN.UTF-8</span><br></pre></td></tr></table></figure>
-
-<h2 id="28、配置xorg-conf文件"><a href="#28、配置xorg-conf文件" class="headerlink" title="28、配置xorg.conf文件"></a>28、配置xorg.conf文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vim &#x2F;etc&#x2F;X11&#x2F;xorg.conf</span><br><span class="line"></span><br><span class="line">Section &quot;Module&quot;</span><br><span class="line">	Load &quot;modesetting&quot;</span><br><span class="line">EndSection</span><br><span class="line"></span><br><span class="line">Section &quot;Device&quot;</span><br><span class="line">	Identifier &quot;nvidia&quot;</span><br><span class="line">	Driver &quot;nvidia&quot;</span><br><span class="line">	BusID &quot;1:0:0&quot;</span><br><span class="line">	Option &quot;AllowEmptyInitialConfiguration&quot;</span><br><span class="line">EndSection</span><br></pre></td></tr></table></figure>
-
-<h2 id="29、配置Xsetup文件确保桌面能顺利启动"><a href="#29、配置Xsetup文件确保桌面能顺利启动" class="headerlink" title="29、配置Xsetup文件确保桌面能顺利启动"></a>29、配置Xsetup文件确保桌面能顺利启动</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ vim &#x2F;usr&#x2F;share&#x2F;sddm&#x2F;scripts&#x2F;Xsetup</span><br><span class="line"></span><br><span class="line">xrandr --setprovideroutputsource modesetting NVIDIA-0</span><br><span class="line">xrandr --auto</span><br></pre></td></tr></table></figure>
-
-<h2 id="30、搞定重启，更换源"><a href="#30、搞定重启，更换源" class="headerlink" title="30、搞定重启，更换源"></a>30、搞定重启，更换源</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">添加archlinuxcn源</span><br><span class="line">$ sudo vim &#x2F;etc&#x2F;pacman.conf</span><br><span class="line">去掉#[multilib]及下一行的注释</span><br><span class="line">在文件尾添加：</span><br><span class="line">[archlinuxcn]</span><br><span class="line">SigLevel &#x3D; Optional TrustAll</span><br><span class="line">Server &#x3D; https:&#x2F;&#x2F;mirrors.cloud.tencent.com&#x2F;archlinuxcn&#x2F;$arch</span><br></pre></td></tr></table></figure>
-
-<h2 id="31、安装-archlinuxcn-keyring包导入-GPG-key"><a href="#31、安装-archlinuxcn-keyring包导入-GPG-key" class="headerlink" title="31、安装 archlinuxcn-keyring包导入 GPG key"></a>31、安装 archlinuxcn-keyring包导入 GPG key</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacman -S archlinuxcn-keyring</span><br><span class="line">$ sudo pacman -Syyu</span><br></pre></td></tr></table></figure>
-
-<h2 id="32、安装中文输入法"><a href="#32、安装中文输入法" class="headerlink" title="32、安装中文输入法"></a>32、安装中文输入法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacman -S fcitx fcitx-libpinyin fcitx-im kcm-fcitx</span><br></pre></td></tr></table></figure>
-
-<h2 id="33、激活中文输入法"><a href="#33、激活中文输入法" class="headerlink" title="33、激活中文输入法"></a>33、激活中文输入法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vim &#x2F;home&#x2F;hanwei&#x2F;.xprofile</span><br><span class="line"></span><br><span class="line">增加</span><br><span class="line">export GTK_IM_MODULE&#x3D;fcitx</span><br><span class="line">export QT_IM_MODULE&#x3D;fcitx</span><br><span class="line">export XMODIFIERS&#x3D;&quot;@im&#x3D;fcitx&quot;</span><br><span class="line"></span><br><span class="line">$ reboot</span><br></pre></td></tr></table></figure>
-
-<h2 id="34、触摸板手势"><a href="#34、触摸板手势" class="headerlink" title="34、触摸板手势"></a>34、触摸板手势</h2><p>下面出现的<code>super</code>和<code>Meta</code>都是<code>win</code>键</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacman -S xf86-input-libinput libinput-gestures</span><br><span class="line">$ sudo gpasswd --add hanwei input</span><br><span class="line">$ reboot</span><br><span class="line">$ libinput-gestures-setup start/stop/autostrat/restart</span><br><span class="line">$ sudo vim ~/.config/libinput-gestures.conf</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 三指右滑切换到下一个虚拟桌面</span><br><span class="line">gesture swipe right 3 xdotool key ctrl+F1</span><br><span class="line"># 三指左滑切换到上一个虚拟桌面</span><br><span class="line">gesture swipe left 3 xdotool key ctrl+F2</span><br><span class="line"></span><br><span class="line"># 四指下滑查看所有任务</span><br><span class="line">gesture swipe down 4 xdotool key ctrl+F9</span><br><span class="line"># 三指下滑最小化当前窗口</span><br><span class="line">gesture swipe down 3 xdotool key super+alt+m</span><br><span class="line"># 四指缩放显示所有桌面</span><br><span class="line">gesture pinch in 4 xdotool key ctrl+F8</span><br></pre></td></tr></table></figure>
-
-<p>系统设置&gt;快捷键&gt;全局快捷键&gt;kwin</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">切换到上一个桌面  Ctrl+F1</span><br><span class="line">切换到下一个桌面  Ctrl+F2</span><br><span class="line">切换显示窗口(对当前桌面) Ctrl+F9</span><br><span class="line">显示桌面网格 Ctrl+F8</span><br><span class="line">最小化窗口 Meta+Alt+M</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/09/%E5%AE%9E%E4%BD%93%E6%9C%BA%E8%A3%85ArchLinux/" data-id="ckbanoofm0001k7ue9clw2v87" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-Archlinux搭建Hexo博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/06/07/Archlinux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/" class="article-date">
-  <time datetime="2020-06-07T06:37:47.000Z" itemprop="datePublished">2020-06-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/07/Archlinux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/">Archlinux搭建Hexo博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>hexo官网：<a href="http://hexo.io/" target="_blank" rel="noopener">http://hexo.io</a></p>
-<h3 id="一、安装Hexo"><a href="#一、安装Hexo" class="headerlink" title="一、安装Hexo"></a>一、安装Hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<h3 id="二、创建并初始化Hexo文件夹"><a href="#二、创建并初始化Hexo文件夹" class="headerlink" title="二、创建并初始化Hexo文件夹"></a>二、创建并初始化Hexo文件夹</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir Blog</span><br><span class="line">$ <span class="built_in">cd</span> Blog</span><br><span class="line">$ hexo init</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-
-<p>初始化文件夹后，指定目录如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tree -L 2</span><br></pre></td></tr></table></figure>
-
-<p>需安装<code>tree</code>工具，<code>sudo pacman -S tree</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Blog</span><br><span class="line">├── _config.yml</span><br><span class="line">├── node_modules</span><br><span class="line">│   ├── abbrev</span><br><span class="line">│   ├── ...</span><br><span class="line">│   └── yargs</span><br><span class="line">├── package.json</span><br><span class="line">├── package-lock.json</span><br><span class="line">├── scaffolds</span><br><span class="line">│   ├── draft.md</span><br><span class="line">│   ├── page.md</span><br><span class="line">│   └── post.md</span><br><span class="line">├── source</span><br><span class="line">│   └── _posts</span><br><span class="line">├── themes</span><br><span class="line">│   └── landscape</span><br><span class="line">└── yarn.lock</span><br></pre></td></tr></table></figure>
-
-<h3 id="三、启动hexo服务"><a href="#三、启动hexo服务" class="headerlink" title="三、启动hexo服务"></a>三、启动hexo服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s(erver) <span class="comment">#(hexo s或者hexo server)</span></span><br></pre></td></tr></table></figure>
-
-<p>结果如下：</p>
-<p><img src="https://s1.ax1x.com/2020/06/07/t2mP56.png" alt=""></p>
-<p>浏览器打开该地址：</p>
-<p><img src="https://s1.ax1x.com/2020/06/07/t2mUZn.png" alt=""></p>
-<h3 id="四、新建自己的第一篇博客"><a href="#四、新建自己的第一篇博客" class="headerlink" title="四、新建自己的第一篇博客"></a>四、新建自己的第一篇博客</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo n(ew) <span class="string">"Archlinux搭建Hexo博客"</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s1.ax1x.com/2020/06/07/t2nlwR.png" alt=""></p>
-<h3 id="五、清理下hexo"><a href="#五、清理下hexo" class="headerlink" title="五、清理下hexo"></a>五、清理下hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
-
-<h3 id="六、生成文章"><a href="#六、生成文章" class="headerlink" title="六、生成文章"></a>六、生成文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g(enerate)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s1.ax1x.com/2020/06/07/t2M8kn.png" alt=""></p>
-<h3 id="七、重新启动服务并用浏览器打开"><a href="#七、重新启动服务并用浏览器打开" class="headerlink" title="七、重新启动服务并用浏览器打开"></a>七、重新启动服务并用浏览器打开</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s1.ax1x.com/2020/06/07/t2Mb1f.png" alt=""></p>
-<p>至此，hexo这个博客框架算是在本地搭建成功了，接下来就是把博客到github上去（或者你自己的服务器也行）。</p>
-<h3 id="八、把博客部署到github上去"><a href="#八、把博客部署到github上去" class="headerlink" title="八、把博客部署到github上去"></a>八、把博客部署到github上去</h3><p>1、新建一个仓库，仓库名：<code>github用户名.github.io</code>，<strong>一定要和你的github用户名一样才行！！！</strong></p>
-<p>2、新建好仓库后，先放一边，去<code>Blog</code>目录下安装一个部署插件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
-<p>3、编辑<code>_config.yml</code>，找到<code>deploy</code>一项</p>
-<p><img src="https://s1.ax1x.com/2020/06/07/t2Gplt.png" alt=""></p>
-<p>4、部署</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d(eploy)</span><br></pre></td></tr></table></figure>
-
-<p>访问：<code>&lt;username&gt;.github.io</code></p>
-<p><img src="https://s1.ax1x.com/2020/06/07/t2YadO.png" alt=""></p>
-<p><strong>搞定收工</strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/07/Archlinux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/" data-id="ckbanoofe0000k7ue3lwh8n9j" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
