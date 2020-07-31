@@ -42,7 +42,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/hanjinfeng0309/PicBed/images_for_hexo/20200730165234.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/hanjinfeng0309/PicBed/images_for_hexo/20200730171235.png">
 <meta property="article:published_time" content="2020-07-27T08:29:34.000Z">
-<meta property="article:modified_time" content="2020-07-30T09:31:15.286Z">
+<meta property="article:modified_time" content="2020-07-31T00:37:42.939Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/hanjinfeng0309/PicBed/images_for_hexo/20200727170413.png">
@@ -195,7 +195,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-30 17:31:15" itemprop="dateModified" datetime="2020-07-30T17:31:15+08:00">2020-07-30</time>
+                <time title="Modified: 2020-07-31 08:37:42" itemprop="dateModified" datetime="2020-07-31T08:37:42+08:00">2020-07-31</time>
               </span>
 
           
@@ -213,6 +213,8 @@
 <p>这里推荐<a href="https://natapp.cn/" target="_blank" rel="noopener">natapp</a>，优点是有免费隧道可以使用，缺点是每次启动都是不同的域名，得随时更换自己的配置情况。</p>
 <p>由于Linux默认不让普通用户使用小于1024一下的端口，而微信公众号开发配置中接口的域名又必须是80端口，所以可以把应用放到8080(或是其它能用的)端口，用防火墙iptables进行端口转发，将80端口的内容转发到8080端口来。</p>
 <p>本次将采用Springboot作为微信网页的后台服务，前端页面使用vue搭建，并记录我在此过程中所遇到的一些坑。</p>
+<a id="more"></a>
+
 <h2 id="一、开启端口转发"><a href="#一、开启端口转发" class="headerlink" title="一、开启端口转发"></a>一、开启端口转发</h2><p>1、首先得机器上安装有<code>iptables</code>：<code>sudo pacman -S iptables</code>，若已安装，则无视这一步。</p>
 <p>2、启动<code>iptables</code>服务：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl start iptables</span><br><span class="line">$ sudo systemctl start iptables.service</span><br></pre></td></tr></table></figure>
@@ -224,6 +226,9 @@
 <p>将该转发规则保存</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo iptables-save &gt; &#x2F;etc&#x2F;iptables&#x2F;iptables.rules</span><br><span class="line">$ sudo systemctl restart iptables</span><br></pre></td></tr></table></figure>
 
+<blockquote>
+<p><strong>注意：</strong> 对于端口转发不同的linux发行版有不同的转发规则，请自行百度。</p>
+</blockquote>
 <h2 id="三、搭建基本Springboot应用并用natapp进行内网穿透"><a href="#三、搭建基本Springboot应用并用natapp进行内网穿透" class="headerlink" title="三、搭建基本Springboot应用并用natapp进行内网穿透"></a>三、搭建基本Springboot应用并用natapp进行内网穿透</h2><p>1、项目结构</p>
 <p><img src="https://cdn.jsdelivr.net/gh/hanjinfeng0309/PicBed/images_for_hexo/20200727170413.png" alt="20200727170413"></p>
 <p>IndexController.java：</p>
