@@ -21,11 +21,11 @@
   </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="澄+++">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="澄+++">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Han wei">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/">
@@ -41,7 +41,7 @@
   };
 </script>
 
-  <title>Hexo</title>
+  <title>澄+++</title>
   
 
 
@@ -92,7 +92,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Hexo</h1>
+      <h1 class="site-title">澄+++</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -149,12 +149,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Han wei">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="澄+++">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -224,12 +224,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Han wei">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="澄+++">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -284,12 +284,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Han wei">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="澄+++">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -303,10 +303,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-06-09 08:47:17 / Modified: 08:52:43" itemprop="dateCreated datePublished" datetime="2020-06-09T08:47:17+08:00">2020-06-09</time>
+              <time title="Created: 2020-06-09 08:47:17" itemprop="dateCreated datePublished" datetime="2020-06-09T08:47:17+08:00">2020-06-09</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-03 11:33:34" itemprop="dateModified" datetime="2020-08-03T11:33:34+08:00">2020-08-03</time>
+              </span>
 
           
 
@@ -325,130 +331,14 @@
 <p>查看jdk版本：<code>java -version</code></p>
 <p>查看本机jdk信息：<code>archlinux-java status</code></p>
 <p>切换本机默认jdk版本：<code>archlinux-java set java-8-openjdk</code></p>
-<h2 id="2、Tomcat"><a href="#2、Tomcat" class="headerlink" title="2、Tomcat"></a>2、Tomcat</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacman -S tomcat7 tomcat8 tomcat9</span><br></pre></td></tr></table></figure>
-
-<p>若idea启动tomcat出现权限不足和找不到bootstrap.jar的信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo chmod -R 777 /usr/share/tomcat7(tomcat8、tomcat9)/conf</span><br><span class="line">$ sudo chmod -R 777 /usr/share/tomcat7(tomcat8、tomcat9)/bin</span><br></pre></td></tr></table></figure>
-
-<h2 id="3、MariaDB数据库"><a href="#3、MariaDB数据库" class="headerlink" title="3、MariaDB数据库"></a>3、MariaDB数据库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacman -S mariadb</span><br><span class="line">$ sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql</span><br><span class="line">$ sudo systemctl start mysqld</span><br><span class="line">$ sudo mysqladmin -u root password <span class="string">'123456'</span></span><br><span class="line">$ sudo mysql -p -u root</span><br></pre></td></tr></table></figure>
-
-<p>idea无法连接mariadb的解决办法：<a href="https://blog.csdn.net/weixin_43390992/article/details/94440281" target="_blank" rel="noopener">链接</a></p>
-<h2 id="4、Maven"><a href="#4、Maven" class="headerlink" title="4、Maven"></a>4、Maven</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacman -S maven</span><br></pre></td></tr></table></figure>
-
-<p>idea中配置maven</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Maven home directory: &#x2F;opt&#x2F;maven</span><br><span class="line">User settings file: ~&#x2F;.m2&#x2F;settings.xml</span><br><span class="line">Local repository: ~&#x2F;.m2&#x2F;repository</span><br></pre></td></tr></table></figure>
-
-<p>settings.xml相关：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>~/.m2/repository<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--maven国内镜像--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirrors</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/repositories/central<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--maven设置jdk版本为jdk1.8--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>jdk18<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activation</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">activeByDefault</span>&gt;</span>true<span class="tag">&lt;/<span class="name">activeByDefault</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">jdk</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">jdk</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">activation</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">maven.compiler.source</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">maven.compiler.source</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">maven.compiler.target</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">maven.compiler.target</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">maven.compiler.compilerVersion</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">maven.compiler.compilerVersion</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="5、vscode利用cmake创建c-c-工程"><a href="#5、vscode利用cmake创建c-c-工程" class="headerlink" title="5、vscode利用cmake创建c/c++工程"></a>5、vscode利用cmake创建c/c++工程</h2><p>安装cmake<code>sudo pacman -S camke</code></p>
-<p>vscode中安装<code>c/c++</code>、<code>cmake</code>、<code>cmake tools</code>、<code>code runner</code>插件</p>
-<p>修改<code>code runner</code>插件配置</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">"code-runner.executorMap": &#123;</span><br><span class="line">    "cpp": "$workspaceRoot/build/bin/main",</span><br><span class="line">    "c": "$workspaceRoot/build/bin/main"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>编写脚本一键创建c++工程：<code>sudo vim /usr/bin/NewVSCodeCppProject</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">rm -rf .vscode</span><br><span class="line">rm -rf build</span><br><span class="line">rm -rf inc</span><br><span class="line">rm -rf src</span><br><span class="line">rm -rf CMakeLists.txt</span><br><span class="line">mkdir .vscode</span><br><span class="line">mkdir build</span><br><span class="line">mkdir inc</span><br><span class="line">mkdir src</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"&#123;"</span> &gt; ./.vscode/c_cpp_properties.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"    \"configurations\": ["</span> &gt;&gt; ./.vscode/c_cpp_properties.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"        &#123;"</span> &gt;&gt; ./.vscode/c_cpp_properties.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            \"name\": \"Linux\","</span> &gt;&gt; ./.vscode/c_cpp_properties.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            \"intelliSenseMode\": \"clang-x64\","</span> &gt;&gt; ./.vscode/c_cpp_properties.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            \"includePath\": ["</span> &gt;&gt; ./.vscode/c_cpp_properties.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"                \"\$&#123;workspaceFolder&#125;/inc/\""</span> &gt;&gt; ./.vscode/c_cpp_properties.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            ],"</span> &gt;&gt; ./.vscode/c_cpp_properties.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            \"cStandard\": \"c11\","</span> &gt;&gt; ./.vscode/c_cpp_properties.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            \"cppStandard\": \"c++17\","</span> &gt;&gt; ./.vscode/c_cpp_properties.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            \"configurationProvider\": \"vector-of-bool.cmake-tools\""</span> &gt;&gt; ./.vscode/c_cpp_properties.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"        &#125;"</span> &gt;&gt; ./.vscode/c_cpp_properties.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"    ],"</span> &gt;&gt; ./.vscode/c_cpp_properties.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"    \"version\": 4"</span> &gt;&gt; ./.vscode/c_cpp_properties.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"&#125;"</span> &gt;&gt; ./.vscode/c_cpp_properties.json</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"&#123;"</span> &gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"    \"version\": \"0.2.0\","</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"    \"configurations\": ["</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"        &#123;"</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            \"name\": \"Launch CMake-built program\","</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            \"type\": \"cppdbg\","</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            \"request\": \"launch\","</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            \"program\": \"\$&#123;command:cmake.launchTargetPath&#125;\","</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            \"args\": [],"</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            \"stopAtEntry\": false,"</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            \"cwd\": \"\$&#123;workspaceFolder&#125;\","</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            \"environment\": [],"</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            \"externalConsole\": false,"</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            \"MIMode\": \"gdb\","</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            \"miDebuggerPath\": \"/usr/bin/gdb\","</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            \"setupCommands\": ["</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"                &#123;"</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"                    \"description\": \"Enable pretty-printing for gdb\","</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"                    \"text\": \"-enable-pretty-printing\","</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"                    \"ignoreFailures\": false"</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"                &#125;"</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"            ]"</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"        &#125;"</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"    ]"</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"&#125;"</span> &gt;&gt; ./.vscode/launch.json</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"# 最低CMake版本要求"</span> &gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"cmake_minimum_required(VERSION 3.10.0)"</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">""</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"# 项目名称"</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"project(main)"</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">""</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"# 设置C/C++标准"</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"set(CMAKE_C_STANDARD 11)"</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"set(CMAKE_CXX_STANDARD 17)"</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"set(CMAKE_CXX_STANDARD_REQUIRED ON)"</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">""</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"# 头文件路径"</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"include_directories(\$&#123;PROJECT_SOURCE_DIR&#125;/inc)"</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">""</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"# 枚举源文件"</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"aux_source_directory(./src SOURCES)"</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">""</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"# 输出路径"</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"set(EXECUTABLE_OUTPUT_PATH \$&#123;PROJECT_BINARY_DIR&#125;/bin)"</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">""</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"# 生成可执行的文件"</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"add_executable(\$&#123;PROJECT_NAME&#125; \$&#123;SOURCES&#125; \$&#123;INCLUDES&#125;)"</span> &gt;&gt; ./CMakeLists.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"#include &lt;iostream&gt;"</span> &gt; ./src/main.cpp</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">""</span> &gt;&gt; ./src/main.cpp</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"int main()"</span> &gt;&gt; ./src/main.cpp</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"&#123;"</span> &gt;&gt; ./src/main.cpp</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"    std::cout &lt;&lt; \"Hello World!!!\" &lt;&lt; std::endl;"</span> &gt;&gt; ./src/main.cpp</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"    return 0;"</span> &gt;&gt; ./src/main.cpp</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"&#125;"</span> &gt;&gt; ./src/main.cpp</span><br><span class="line"></span><br><span class="line">code .</span><br></pre></td></tr></table></figure>
-
-<p><code>sudo chmod +x /usr/bin/NewVSCodeCppProject</code></p>
-<p>使用该脚本创建c/c++工程示范样例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir HelloWorld</span><br><span class="line">$ <span class="built_in">cd</span> HelloWorld</span><br><span class="line">$ NewVSCodeCppProject</span><br></pre></td></tr></table></figure>
-
-<p>在vscode中按F7编译工程，<code>code runner</code>插件运行程序(<code>ctrl+alt+N</code>)</p>
-<p>按<code>ctrl+F5</code>调试程序</p>
-<h2 id="6、python第三方软件包安装"><a href="#6、python第三方软件包安装" class="headerlink" title="6、python第三方软件包安装"></a>6、python第三方软件包安装</h2><blockquote>
-<p>a、安装<code>pip</code></p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacman -S python-pip   //python3</span><br><span class="line">$ sudo pacman -S python2-pip  //python2</span><br></pre></td></tr></table></figure>
-
-<p>更换国内源：<code>pip config set global.index-url https://mirrors.aliyun.com/pypi/simple</code></p>
-<blockquote>
-<p>b、或者直接用pacman安装即可，eg：</p>
-</blockquote>
-<p><code>sudo pacman -S python-numpy python-scikit-learn python-pandas python-matplotlib</code></p>
-<h2 id="7、在Linux中自定义”pause”命令"><a href="#7、在Linux中自定义”pause”命令" class="headerlink" title="7、在Linux中自定义”pause”命令"></a>7、在Linux中自定义”pause”命令</h2><p>效果和windows下的<code>system(&quot;pause&quot;)</code>一样。</p>
-<p><code>sudo vim /usr/bin/pause</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">get_char()</span><br><span class="line">&#123;</span><br><span class="line">  SAVEDSTTY=`stty -g`</span><br><span class="line">  stty -<span class="built_in">echo</span></span><br><span class="line">  stty raw</span><br><span class="line">  dd <span class="keyword">if</span>=/dev/tty bs=1 count=1 2&gt; /dev/null</span><br><span class="line">  stty -raw</span><br><span class="line">  stty <span class="built_in">echo</span></span><br><span class="line">  stty <span class="variable">$SAVEDSTTY</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> [ -z <span class="string">"<span class="variable">$1</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">'Press any key to continue...'</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	<span class="built_in">echo</span> -e <span class="string">"<span class="variable">$1</span>"</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"> </span><br><span class="line">get_char</span><br></pre></td></tr></table></figure>
-
-<p><code>sudo chmod 0755 /usr/bin/pause</code></p>
-<h2 id="8、docker"><a href="#8、docker" class="headerlink" title="8、docker"></a>8、docker</h2><p>安装：<code>sudo pacman -S docker</code></p>
-<p>配置阿里云镜像服务：<a href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors" target="_blank" rel="noopener">https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors</a></p>
-<p><code>sudo vim /etc/docker/daemon.json</code></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> 	<span class="attr">"registry-mirrors"</span>: [<span class="string">"https://*******.mirror.aliyuncs.com"</span>] <span class="comment">//加速器地址</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>sudo systemctl daemon-reload</code></p>
-<p><code>sudo systemctl restart docker</code></p>
-<h2 id="9、开启docker中mysql服务-docker相关命令自行百度"><a href="#9、开启docker中mysql服务-docker相关命令自行百度" class="headerlink" title="9、开启docker中mysql服务(docker相关命令自行百度)"></a>9、开启docker中mysql服务(docker相关命令自行百度)</h2><p><code>sudo docker pull mysql:5.7.29</code></p>
-<p><code>sudo docker run --name mysql57 -p 3307:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7.29</code></p>
-<p>若idea等其他客户端无法连接docker中的mysql，可以参考<a href="https://blog.csdn.net/a15123837995/article/details/83751612" target="_blank" rel="noopener">链接1</a>、<a href="https://blog.csdn.net/weixin_43390992/article/details/94440281" target="_blank" rel="noopener">链接2</a></p>
-<h2 id="10、开启docker中redis服务"><a href="#10、开启docker中redis服务" class="headerlink" title="10、开启docker中redis服务"></a>10、开启docker中redis服务</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ sudo docker pull redis:5.0.8</span><br><span class="line">$ sudo docker run --name myredis -p 6379:6379 -d redis:5.0.8</span><br><span class="line">-------------------------------------------------------------------------------------------</span><br><span class="line">$ sudo docker run -p 6379:6379 (-v $PWD&#x2F;data:&#x2F;data)  -d redis:5.0.8 redis-server --appendonly yes</span><br><span class="line"></span><br><span class="line">命令说明：</span><br><span class="line">-p 6379:6379 : 将容器的6379端口映射到主机的6379端口</span><br><span class="line">-v $PWD&#x2F;data:&#x2F;data : 将主机中当前目录下的data挂载到容器的&#x2F;data</span><br><span class="line">redis-server --appendonly yes : 在容器执行redis-server启动命令，并打开redis持久化配置</span><br></pre></td></tr></table></figure>
-
-<h2 id="11、开启docker中elasticsearch服务"><a href="#11、开启docker中elasticsearch服务" class="headerlink" title="11、开启docker中elasticsearch服务"></a>11、开启docker中elasticsearch服务</h2><p><code>sudo docker pull elasticsearch:6.8.8</code></p>
-<p><code>sudo docker network create esnet</code>：如果需要安装kibana等其他，需要创建一个网络，名字任意取，让他们在同一个网络，使得es和kibana通信</p>
-<p><code>sudo docker run --name es -d -p 9200:9200 -p 9300:9300 --network esnet -e &quot;discovery.type=single-node&quot; elasticsearch:6.8.8</code></p>
-<h2 id="12、启动docker出现的问题"><a href="#12、启动docker出现的问题" class="headerlink" title="12、启动docker出现的问题"></a>12、启动docker出现的问题</h2><p>Docker无法启动 <code>error initializing graphdriver: driver not supported</code>，解决办法：</p>
-<p><code>sudo vim /etc/docker/daemon.json</code></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"storage-driver"</span>: <span class="string">"overlay2"</span>,</span><br><span class="line">  <span class="attr">"storage-opts"</span>: [</span><br><span class="line">    <span class="string">"overlay2.override_kernel_check=true"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>重启</p>
-<h2 id="13、CLion-CMake配置Qt开发环境"><a href="#13、CLion-CMake配置Qt开发环境" class="headerlink" title="13、CLion+CMake配置Qt开发环境"></a>13、CLion+CMake配置Qt开发环境</h2><p>项目结构：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">project</span><br><span class="line">├── cmake_build_debug</span><br><span class="line">├── inc     									&#x2F;&#x2F; 头文件</span><br><span class="line">│	 ├── ***.h</span><br><span class="line">│	 └── ...</span><br><span class="line">├── src     									&#x2F;&#x2F; 源文件</span><br><span class="line">│	 ├── ***.cpp</span><br><span class="line">│	 └── ...</span><br><span class="line">└── CMakeLists.txt</span><br></pre></td></tr></table></figure>
-
-<p><code>CMakeLists.txt</code>内容如下</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.15</span>)</span><br><span class="line"><span class="keyword">project</span>(main)</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span>(CMAKE_C_STANDARD <span class="number">11</span>)</span><br><span class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD <span class="number">17</span>)</span><br><span class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD_REQUIRED <span class="keyword">ON</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">find_package</span>(Qt5Core REQUIRED)</span><br><span class="line"><span class="keyword">find_package</span>(Qt5Gui REQUIRED)</span><br><span class="line"><span class="keyword">find_package</span>(Qt5Widgets REQUIRED)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 头文件路径</span></span><br><span class="line"><span class="keyword">include_directories</span>(<span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/inc)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 枚举源文件</span></span><br><span class="line"><span class="keyword">aux_source_directory</span>(./src SOURCES)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成可执行的文件</span></span><br><span class="line"><span class="keyword">add_executable</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> <span class="variable">$&#123;SOURCES&#125;</span> <span class="variable">$&#123;INCLUDES&#125;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> Qt5::Core)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> Qt5::Gui)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> Qt5::Widgets)</span><br></pre></td></tr></table></figure>
-
-<p><strong>注意：</strong> <strong><em>要把<code>inc</code>文件夹设为代码文件夹</em></strong>，<code>右键 &gt; Make Directory As &gt; Project Sources and Headers</code>，若出现<code>this file does not belong...</code>右键项目名 -&gt; <code>Reload CMake Project</code></p>
-<h2 id="14、Linux命令行常用快捷键"><a href="#14、Linux命令行常用快捷键" class="headerlink" title="14、Linux命令行常用快捷键"></a>14、Linux命令行常用快捷键</h2><ul>
-<li>Ctrl  + U                 剪切光标前的内容</li>
-<li>Ctrl  + K                 剪切光标至行末的内容</li>
-<li>Ctrl  + Y                 粘贴</li>
-<li>Ctrl  + E                移动光标至行末</li>
-<li>Ctrl  + A                 移动光标至行首</li>
-<li>Alt   + F                 跳向下一个空格</li>
-<li>Alt   + B                跳回上一个空格</li>
-<li>Alt   + Backspace          删除前一个单词</li>
-<li>Ctrl  + W             剪切光标后一个单词</li>
-</ul>
-<h2 id="15、vscode中background插件失效的解决办法"><a href="#15、vscode中background插件失效的解决办法" class="headerlink" title="15、vscode中background插件失效的解决办法"></a>15、vscode中background插件失效的解决办法</h2><p>命令行输入：</p>
-<p><code>sudo chmod o+w /opt/visual-studio-code/resources/app/out/vs/workbench/workbench.desktop.main.css</code></p>
-<h2 id="16、IDEA利用阿里源快速创建SpringBoot项目"><a href="#16、IDEA利用阿里源快速创建SpringBoot项目" class="headerlink" title="16、IDEA利用阿里源快速创建SpringBoot项目"></a>16、IDEA利用阿里源快速创建SpringBoot项目</h2><p>配置 <strong>Aliyun Java Initializer:</strong></p>
-<p><code>New Project</code> -&gt; <code>Spring Initializer</code> -&gt; <code>Custom</code>, 填入网址：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;start.aliyun.com</span><br></pre></td></tr></table></figure>
-
-<h2 id="17、Linux下查看硬件信息"><a href="#17、Linux下查看硬件信息" class="headerlink" title="17、Linux下查看硬件信息"></a>17、Linux下查看硬件信息</h2><blockquote>
-<p>a、命令行</p>
-</blockquote>
-<p>安装<code>dmidecode</code>: <code>sudo pacman -S dmidecode</code></p>
-<p>使用：<code>sudo dmidecode</code></p>
-<p>查看内存信息：<code>sudo dmidecode -t memory</code></p>
-<p>具体用法：<code>man dmidecode</code> or <code>dmidecode -h</code></p>
-<blockquote>
-<p>b、图形化</p>
-</blockquote>
-<p>安装<code>cpu-g</code>、<code>hardinfo</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yay -S cpu-g-bzr hardinfo</span><br></pre></td></tr></table></figure>
-
-<h2 id="18、Archlinux安装配置windows字体"><a href="#18、Archlinux安装配置windows字体" class="headerlink" title="18、Archlinux安装配置windows字体"></a>18、Archlinux安装配置windows字体</h2><p>拷贝<code>C:\windows\fonts\</code>下的所有字体</p>
-<p>在ArchLinux中创建相应字体文件夹<code>sudo mkdir /usr/share/fonts/WindowsFonts</code></p>
-<p>将复制好的<code>Windows</code>字体复制进去<code>sudo cp /window_fonts_path/fonts/* /usr/share/fonts/WindowsFonts</code></p>
-<p>给字体文件夹权限<code>sudo chmod 755 /usr/share/fonts/WindowsFonts/*</code></p>
-<p>重新生成字体缓存<code>fc-cahce -f</code></p>
-<h2 id="19、ArchLinux字体推荐"><a href="#19、ArchLinux字体推荐" class="headerlink" title="19、ArchLinux字体推荐"></a>19、ArchLinux字体推荐</h2><p>中文字体推荐：文泉驿、思源字体。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacman -S wqy-microhei wqy-bitmapfont wqy-zenhei wqy-microhei-lite</span><br><span class="line">$ sudo pacman -S abobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts</span><br></pre></td></tr></table></figure>
-
-<p>西文字体推荐：dajavu、noto字体。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacman -S ttf-dejavu</span><br><span class="line">$ sudo pacman -S noto-fonts noto-fonts-extra noto-fonts-emoji noto-fonts-cjk</span><br></pre></td></tr></table></figure>
-
-<p>在安装使用windows字体后，电脑默认windows中文字体编程字体，修改为文泉驿字体：</p>
-<p>编辑<code>fonts.conf</code>，<code>vim ~/.config/fontconfig/fonts.conf</code>，内容如下：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version='1.0'?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">fontconfig</span> <span class="meta-keyword">SYSTEM</span> <span class="meta-string">'fonts.dtd'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">fontconfig</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">alias</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">family</span>&gt;</span>sans-serif<span class="tag">&lt;/<span class="name">family</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">prefer</span>&gt;</span></span><br><span class="line">	    <span class="tag">&lt;<span class="name">family</span>&gt;</span>WenQuanYi Micro Hei<span class="tag">&lt;/<span class="name">family</span>&gt;</span></span><br><span class="line">	    <span class="tag">&lt;<span class="name">family</span>&gt;</span>WenQuanYi Zen Hei<span class="tag">&lt;/<span class="name">family</span>&gt;</span></span><br><span class="line">	    <span class="tag">&lt;<span class="name">family</span>&gt;</span>WenQuanYi Zen Hei Sharp<span class="tag">&lt;/<span class="name">family</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">prefer</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">alias</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">alias</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">family</span>&gt;</span>serif<span class="tag">&lt;/<span class="name">family</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">prefer</span>&gt;</span></span><br><span class="line">	    <span class="tag">&lt;<span class="name">family</span>&gt;</span>WenQuanYi Micro Hei Lite<span class="tag">&lt;/<span class="name">family</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">prefer</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">alias</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">alias</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">family</span>&gt;</span>monospace<span class="tag">&lt;/<span class="name">family</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">prefer</span>&gt;</span></span><br><span class="line">	    <span class="tag">&lt;<span class="name">family</span>&gt;</span>WenQuanYi Micro Hei Mono<span class="tag">&lt;/<span class="name">family</span>&gt;</span></span><br><span class="line">	    <span class="tag">&lt;<span class="name">family</span>&gt;</span>WenQuanYi Zen Hei Mono<span class="tag">&lt;/<span class="name">family</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">prefer</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">alias</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">fontconfig</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="20、ArchLinux安装微信小程序开发者工具"><a href="#20、ArchLinux安装微信小程序开发者工具" class="headerlink" title="20、ArchLinux安装微信小程序开发者工具"></a>20、ArchLinux安装微信小程序开发者工具</h2><p>直接yay安装：<code>yay -S wechat-devtools</code></p>
-<p>或者参考dragonation大佬的方案，几乎开箱即用：<strong><a href="https://github.com/dragonation/wechat-devtools" target="_blank" rel="noopener">wechat-devtools</a></strong></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/06/09/ArchLinux%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -471,12 +361,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Han wei">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="澄+++">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -490,10 +380,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-06-09 08:39:49 / Modified: 08:44:50" itemprop="dateCreated datePublished" datetime="2020-06-09T08:39:49+08:00">2020-06-09</time>
+              <time title="Created: 2020-06-09 08:39:49" itemprop="dateCreated datePublished" datetime="2020-06-09T08:39:49+08:00">2020-06-09</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-03 11:32:27" itemprop="dateModified" datetime="2020-08-03T11:32:27+08:00">2020-08-03</time>
+              </span>
 
           
 
@@ -511,84 +407,14 @@
 <p>无线：<code>wifi-menu</code></p>
 <p><code>ping baidu.com</code></p>
 <h2 id="2、同步系统时间"><a href="#2、同步系统时间" class="headerlink" title="2、同步系统时间"></a>2、同步系统时间</h2><p><code>timedatectl set-ntp true</code></p>
-<h2 id="3、分区方案"><a href="#3、分区方案" class="headerlink" title="3、分区方案"></a>3、分区方案</h2><p><strong>固态部分：</strong></p>
-<ul>
-<li><code>/boot 1g  /dev/sda1</code></li>
-<li><code>/ 110.2g  /dev/sda2</code></li>
-<li><code>/swap 8g  /dev/sda3</code></li>
-</ul>
-<p><strong>机械部分：</strong></p>
-<ul>
-<li><code>/home 200g   /dev/sdb1</code></li>
-<li><code>/var 150g  /dev/sdb2</code></li>
-<li><code>/media/Downloads 150g  /dev/sdb3</code></li>
-<li><code>/media/Documents 剩下  /dev/sdb4</code></li>
-</ul>
-<p><strong>格式化分区</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mkfs.fat -F32 /dev/sda1</span></span><br><span class="line"><span class="comment"># mkfs.ext4 /dev/sda2</span></span><br><span class="line"><span class="comment"># mkswap /dev/sda3</span></span><br><span class="line"><span class="comment"># swapon /dev/sda3</span></span><br><span class="line"><span class="comment"># mkfs.ext4 /dev/sdb1</span></span><br><span class="line"><span class="comment"># mkfs.ext4 /dev/sdb2</span></span><br><span class="line"><span class="comment"># mkfs.ext4 /dev/sdb3</span></span><br><span class="line"><span class="comment"># mkfs.ext4 /dev/sdb4</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>挂载分区</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mount /dev/sda2/ /mnt  	//一定要先挂载"/"目录</span></span><br><span class="line"><span class="comment"># mkdir /mnt/boot</span></span><br><span class="line"><span class="comment"># mount /dev/sda1/ /mnt/boot</span></span><br><span class="line"><span class="comment"># mkdir /mnt/home</span></span><br><span class="line"><span class="comment"># mount /dev/sdb1/ /mnt/home</span></span><br><span class="line"><span class="comment"># mkdir /mnt/var</span></span><br><span class="line"><span class="comment"># mount /dev/sdb2/ /mnt/var</span></span><br><span class="line"><span class="comment"># mkdir -p /mnt/media/Downloads</span></span><br><span class="line"><span class="comment"># mount /dev/sdb3/ /mnt/media/Downloads </span></span><br><span class="line"><span class="comment"># mkdir /mnt/media/Documents</span></span><br><span class="line"><span class="comment"># mount /dev/sdb4/ /mnt/media/Documents</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="4、更换国内源"><a href="#4、更换国内源" class="headerlink" title="4、更换国内源"></a>4、更换国内源</h2><p><code>vim /etc/pacman.d/mirrorlist</code>把中国源放到顶部</p>
-<p>推荐华为云镜像(清华镜像容易崩)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## 华为</span><br><span class="line">Server &#x3D; https:&#x2F;&#x2F;mirrors.huaweicloud.com&#x2F;archlinux&#x2F;$repo&#x2F;os&#x2F;$arch</span><br></pre></td></tr></table></figure>
-
-<h2 id="5、安装基本包"><a href="#5、安装基本包" class="headerlink" title="5、安装基本包"></a>5、安装基本包</h2><p><code>pacstrap /mnt base base-devel linux linux-firmware vi vim dhcpcd</code></p>
-<h2 id="6、-生成fstab"><a href="#6、-生成fstab" class="headerlink" title="6、 生成fstab"></a>6、 生成fstab</h2><p><code>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</code></p>
-<h2 id="7、查看fstab"><a href="#7、查看fstab" class="headerlink" title="7、查看fstab"></a>7、查看fstab</h2><p><code>cat /mnt/etc/fstab</code></p>
-<h2 id="8、移交控制权"><a href="#8、移交控制权" class="headerlink" title="8、移交控制权"></a>8、移交控制权</h2><p><code>arch-chroot /mnt</code></p>
-<h2 id="9、设置时区"><a href="#9、设置时区" class="headerlink" title="9、设置时区"></a>9、设置时区</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># ln -sf &#x2F;usr&#x2F;share&#x2F;zoneinfo&#x2F;Asia&#x2F;Shanghai &#x2F;etc&#x2F;localtime</span><br><span class="line"># hwclock --systohc</span><br></pre></td></tr></table></figure>
-
-<h2 id="10、修改语言配置文件"><a href="#10、修改语言配置文件" class="headerlink" title="10、修改语言配置文件"></a>10、修改语言配置文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> vim /etc/locale.gen</span></span><br><span class="line">把下面几行的注释去掉</span><br><span class="line"><span class="meta">#</span><span class="bash">en_US.UTF-8 UTF-8</span></span><br><span class="line"><span class="meta">#</span><span class="bash">zh_CN.UTF-8 UTF-8</span></span><br><span class="line"><span class="meta">#</span><span class="bash">zh_HK.UTF-8 UTF-8</span></span><br><span class="line"><span class="meta">#</span><span class="bash">zh_TW.UTF-8 UTF-8</span></span><br><span class="line">运行以下代码进行生成</span><br><span class="line"><span class="meta">#</span><span class="bash"> locale-gen</span></span><br><span class="line">编辑locale.conf</span><br><span class="line"><span class="meta">#</span><span class="bash"> vim /etc/locale.conf</span></span><br><span class="line">第一行输入：</span><br><span class="line">LANG=en_US.UTF-8</span><br></pre></td></tr></table></figure>
-
-<h2 id="11、编辑主机名"><a href="#11、编辑主机名" class="headerlink" title="11、编辑主机名"></a>11、编辑主机名</h2><p><code>vim /etc/hostname</code> 第一行写入主机的名字<code>hanjinfeng</code></p>
-<h2 id="12、-编辑hosts"><a href="#12、-编辑hosts" class="headerlink" title="12、 编辑hosts"></a>12、 编辑hosts</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># vim &#x2F;etc&#x2F;hosts</span><br><span class="line"></span><br><span class="line">127.0.0.1 localhost</span><br><span class="line">::1 localhost</span><br><span class="line">127.0.0.1 hanjinfeng.domain hanjinfeng</span><br></pre></td></tr></table></figure>
-
-<h2 id="13、为root设置一个密码"><a href="#13、为root设置一个密码" class="headerlink" title="13、为root设置一个密码"></a>13、为root设置一个密码</h2><p><code>passwd</code></p>
-<h2 id="14、安装一些重要的软件包"><a href="#14、安装一些重要的软件包" class="headerlink" title="14、安装一些重要的软件包"></a>14、安装一些重要的软件包</h2><p><code>pacman -S dialog netctl net-tools wpa_supplicant networkmanager intel-ucode</code></p>
-<h2 id="15、安装grub引导"><a href="#15、安装grub引导" class="headerlink" title="15、安装grub引导"></a>15、安装grub引导</h2><p><code>pacman -S grub efibootmgr</code></p>
-<h2 id="16、创建grub引导"><a href="#16、创建grub引导" class="headerlink" title="16、创建grub引导"></a>16、创建grub引导</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># mkdir &#x2F;boot&#x2F;grub</span><br><span class="line"># grub-mkconfig &gt; &#x2F;boot&#x2F;grub&#x2F;grub.cfg</span><br><span class="line"># grub-install --target&#x3D;x86_64-efi --efi-directory&#x3D;&#x2F;boot</span><br></pre></td></tr></table></figure>
-
-<h2 id="17、重启"><a href="#17、重启" class="headerlink" title="17、重启"></a>17、重启</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">退出arch-chroot</span><br><span class="line"># exit </span><br><span class="line">解除挂载</span><br><span class="line"># umount &#x2F;mnt&#x2F;boot</span><br><span class="line"># umount &#x2F;mnt&#x2F;home</span><br><span class="line"># umount &#x2F;mnt&#x2F;var</span><br><span class="line"># umount &#x2F;mnt&#x2F;media&#x2F;Downloads</span><br><span class="line"># umount &#x2F;mnt&#x2F;media&#x2F;Documents</span><br><span class="line"># umount &#x2F;mnt</span><br><span class="line">重启，拔掉U盘</span><br></pre></td></tr></table></figure>
-
-<h2 id="18、创建普通用户以普通用户登录"><a href="#18、创建普通用户以普通用户登录" class="headerlink" title="18、创建普通用户以普通用户登录"></a>18、创建普通用户以普通用户登录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># useradd -m -G wheel hanwei &#x2F;&#x2F; 记得先用root登录并联好网</span><br><span class="line">设置密码</span><br><span class="line"># passwd hanwei</span><br><span class="line">为普通用户添加sudo权限</span><br><span class="line"># vim &#x2F;etc&#x2F;sudoers</span><br><span class="line">把 #%wheel ALL&#x3D;(ALL) ALL注释去掉</span><br><span class="line"># exit</span><br><span class="line">退出以普通用户登录</span><br></pre></td></tr></table></figure>
-
-<h2 id="19、安装nvidia闭源驱动"><a href="#19、安装nvidia闭源驱动" class="headerlink" title="19、安装nvidia闭源驱动"></a>19、安装nvidia闭源驱动</h2><p><code>sudo pacman -S nvidia lib32-nvidia-utils</code></p>
-<h2 id="20、安装xorg"><a href="#20、安装xorg" class="headerlink" title="20、安装xorg"></a>20、安装xorg</h2><p><code>sudo pacman -S xorg xorg-xrandr</code></p>
-<h2 id="21、安装中文字体"><a href="#21、安装中文字体" class="headerlink" title="21、安装中文字体"></a>21、安装中文字体</h2><p><code>sudo pacman -S ttf-dejavu wqy-microhei</code></p>
-<h2 id="22、安装kde桌面"><a href="#22、安装kde桌面" class="headerlink" title="22、安装kde桌面"></a>22、安装kde桌面</h2><p><code>sudo pacman -S plasma kde-applications packagekit-qt5</code></p>
-<h2 id="23、安装图形登录界面"><a href="#23、安装图形登录界面" class="headerlink" title="23、安装图形登录界面"></a>23、安装图形登录界面</h2><p><code>sudo pacman -S sddm sddm-kcm</code></p>
-<h2 id="24、开机自启sddm服务"><a href="#24、开机自启sddm服务" class="headerlink" title="24、开机自启sddm服务"></a>24、开机自启sddm服务</h2><p><code>sudo systemctl enable sddm</code></p>
-<p>若kde出现崩溃现象：<code>kde ××× 非正常关闭了</code></p>
-<p>解决办法：重启plasma</p>
-<p><code>killall plasmashell &amp;&amp; kstart5 plasmashell</code>或者<code>kquitapp5 plasmashell &amp;&amp; kstart5 plasmashell</code></p>
-<h2 id="25、开机自启网络服务"><a href="#25、开机自启网络服务" class="headerlink" title="25、开机自启网络服务"></a>25、开机自启网络服务</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl <span class="built_in">enable</span> NetworkManager</span><br><span class="line">$ sudo systemctl <span class="built_in">enable</span> dhcpcd</span><br></pre></td></tr></table></figure>
-
-<h2 id="26、安装声音软件包"><a href="#26、安装声音软件包" class="headerlink" title="26、安装声音软件包"></a>26、安装声音软件包</h2><p><code>sudo pacman -S alsa-utils pulseaudio pulseaudio-alsa</code></p>
-<h2 id="27、激活桌面语言设定"><a href="#27、激活桌面语言设定" class="headerlink" title="27、激活桌面语言设定"></a>27、激活桌面语言设定</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ vim &#x2F;home&#x2F;hanwei&#x2F;.xprofile</span><br><span class="line"></span><br><span class="line">export LANG&#x3D;zh_CN.UTF-8</span><br><span class="line">export LC_ALL&#x3D;zh_CN.UTF-8</span><br></pre></td></tr></table></figure>
-
-<h2 id="28、配置xorg-conf文件"><a href="#28、配置xorg-conf文件" class="headerlink" title="28、配置xorg.conf文件"></a>28、配置xorg.conf文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vim &#x2F;etc&#x2F;X11&#x2F;xorg.conf</span><br><span class="line"></span><br><span class="line">Section &quot;Module&quot;</span><br><span class="line">	Load &quot;modesetting&quot;</span><br><span class="line">EndSection</span><br><span class="line"></span><br><span class="line">Section &quot;Device&quot;</span><br><span class="line">	Identifier &quot;nvidia&quot;</span><br><span class="line">	Driver &quot;nvidia&quot;</span><br><span class="line">	BusID &quot;1:0:0&quot;</span><br><span class="line">	Option &quot;AllowEmptyInitialConfiguration&quot;</span><br><span class="line">EndSection</span><br></pre></td></tr></table></figure>
-
-<h2 id="29、配置Xsetup文件确保桌面能顺利启动"><a href="#29、配置Xsetup文件确保桌面能顺利启动" class="headerlink" title="29、配置Xsetup文件确保桌面能顺利启动"></a>29、配置Xsetup文件确保桌面能顺利启动</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ vim &#x2F;usr&#x2F;share&#x2F;sddm&#x2F;scripts&#x2F;Xsetup</span><br><span class="line"></span><br><span class="line">xrandr --setprovideroutputsource modesetting NVIDIA-0</span><br><span class="line">xrandr --auto</span><br></pre></td></tr></table></figure>
-
-<h2 id="30、搞定重启，更换源"><a href="#30、搞定重启，更换源" class="headerlink" title="30、搞定重启，更换源"></a>30、搞定重启，更换源</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">添加archlinuxcn源</span><br><span class="line">$ sudo vim &#x2F;etc&#x2F;pacman.conf</span><br><span class="line">去掉#[multilib]及下一行的注释</span><br><span class="line">在文件尾添加：</span><br><span class="line">[archlinuxcn]</span><br><span class="line">SigLevel &#x3D; Optional TrustAll</span><br><span class="line">Server &#x3D; https:&#x2F;&#x2F;mirrors.cloud.tencent.com&#x2F;archlinuxcn&#x2F;$arch</span><br></pre></td></tr></table></figure>
-
-<h2 id="31、安装-archlinuxcn-keyring包导入-GPG-key"><a href="#31、安装-archlinuxcn-keyring包导入-GPG-key" class="headerlink" title="31、安装 archlinuxcn-keyring包导入 GPG key"></a>31、安装 archlinuxcn-keyring包导入 GPG key</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacman -S archlinuxcn-keyring</span><br><span class="line">$ sudo pacman -Syyu</span><br></pre></td></tr></table></figure>
-
-<h2 id="32、安装中文输入法"><a href="#32、安装中文输入法" class="headerlink" title="32、安装中文输入法"></a>32、安装中文输入法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacman -S fcitx fcitx-libpinyin fcitx-im kcm-fcitx</span><br></pre></td></tr></table></figure>
-
-<h2 id="33、激活中文输入法"><a href="#33、激活中文输入法" class="headerlink" title="33、激活中文输入法"></a>33、激活中文输入法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vim &#x2F;home&#x2F;hanwei&#x2F;.xprofile</span><br><span class="line"></span><br><span class="line">增加</span><br><span class="line">export GTK_IM_MODULE&#x3D;fcitx</span><br><span class="line">export QT_IM_MODULE&#x3D;fcitx</span><br><span class="line">export XMODIFIERS&#x3D;&quot;@im&#x3D;fcitx&quot;</span><br><span class="line"></span><br><span class="line">$ reboot</span><br></pre></td></tr></table></figure>
-
-<h2 id="34、触摸板手势"><a href="#34、触摸板手势" class="headerlink" title="34、触摸板手势"></a>34、触摸板手势</h2><p>下面出现的<code>super</code>和<code>Meta</code>都是<code>win</code>键</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacman -S xf86-input-libinput libinput-gestures</span><br><span class="line">$ sudo gpasswd --add hanwei input</span><br><span class="line">$ reboot</span><br><span class="line">$ libinput-gestures-setup start/stop/autostrat/restart</span><br><span class="line">$ sudo vim ~/.config/libinput-gestures.conf</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 三指右滑切换到下一个虚拟桌面</span><br><span class="line">gesture swipe right 3 xdotool key ctrl+F1</span><br><span class="line"># 三指左滑切换到上一个虚拟桌面</span><br><span class="line">gesture swipe left 3 xdotool key ctrl+F2</span><br><span class="line"></span><br><span class="line"># 四指下滑查看所有任务</span><br><span class="line">gesture swipe down 4 xdotool key ctrl+F9</span><br><span class="line"># 三指下滑最小化当前窗口</span><br><span class="line">gesture swipe down 3 xdotool key super+alt+m</span><br><span class="line"># 四指缩放显示所有桌面</span><br><span class="line">gesture pinch in 4 xdotool key ctrl+F8</span><br></pre></td></tr></table></figure>
-
-<p>系统设置&gt;快捷键&gt;全局快捷键&gt;kwin</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">切换到上一个桌面  Ctrl+F1</span><br><span class="line">切换到下一个桌面  Ctrl+F2</span><br><span class="line">切换显示窗口(对当前桌面) Ctrl+F9</span><br><span class="line">显示桌面网格 Ctrl+F8</span><br><span class="line">最小化窗口 Meta+Alt+M</span><br></pre></td></tr></table></figure>
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/06/09/%E5%AE%9E%E4%BD%93%E6%9C%BA%E8%A3%85ArchLinux/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -611,12 +437,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Han wei">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="澄+++">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -638,7 +464,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-14 15:10:52" itemprop="dateModified" datetime="2020-06-14T15:10:52+08:00">2020-06-14</time>
+                <time title="Modified: 2020-08-03 11:33:23" itemprop="dateModified" datetime="2020-08-03T11:33:23+08:00">2020-08-03</time>
               </span>
 
           
@@ -656,44 +482,14 @@
 <h3 id="一、安装Hexo"><a href="#一、安装Hexo" class="headerlink" title="一、安装Hexo"></a>一、安装Hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
 <h3 id="二、创建并初始化Hexo文件夹"><a href="#二、创建并初始化Hexo文件夹" class="headerlink" title="二、创建并初始化Hexo文件夹"></a>二、创建并初始化Hexo文件夹</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir Blog</span><br><span class="line">$ <span class="built_in">cd</span> Blog</span><br><span class="line">$ hexo init</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-
-<p>初始化文件夹后，指定目录如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tree -L 2</span><br></pre></td></tr></table></figure>
-
-<p>需安装<code>tree</code>工具，<code>sudo pacman -S tree</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Blog</span><br><span class="line">├── _config.yml</span><br><span class="line">├── node_modules</span><br><span class="line">│   ├── abbrev</span><br><span class="line">│   ├── ...</span><br><span class="line">│   └── yargs</span><br><span class="line">├── package.json</span><br><span class="line">├── package-lock.json</span><br><span class="line">├── scaffolds</span><br><span class="line">│   ├── draft.md</span><br><span class="line">│   ├── page.md</span><br><span class="line">│   └── post.md</span><br><span class="line">├── source</span><br><span class="line">│   └── _posts</span><br><span class="line">├── themes</span><br><span class="line">│   └── landscape</span><br><span class="line">└── yarn.lock</span><br></pre></td></tr></table></figure>
-
-<h3 id="三、启动hexo服务"><a href="#三、启动hexo服务" class="headerlink" title="三、启动hexo服务"></a>三、启动hexo服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s(erver) <span class="comment">#(hexo s或者hexo server)</span></span><br></pre></td></tr></table></figure>
-
-<p>结果如下：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/hanjinfeng0309/PicBed/images_for_hexo/t2mP56.png" alt=""></p>
-<p>浏览器打开该地址：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/hanjinfeng0309/PicBed/images_for_hexo/t2mUZn.png" alt=""></p>
-<h3 id="四、新建自己的第一篇博客"><a href="#四、新建自己的第一篇博客" class="headerlink" title="四、新建自己的第一篇博客"></a>四、新建自己的第一篇博客</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo n(ew) <span class="string">"Archlinux搭建Hexo博客"</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/hanjinfeng0309/PicBed/images_for_hexo/t2nlwR.png" alt=""></p>
-<h3 id="五、清理下hexo"><a href="#五、清理下hexo" class="headerlink" title="五、清理下hexo"></a>五、清理下hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
-
-<h3 id="六、生成文章"><a href="#六、生成文章" class="headerlink" title="六、生成文章"></a>六、生成文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g(enerate)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/hanjinfeng0309/PicBed/images_for_hexo/t2M8kn.png" alt=""></p>
-<h3 id="七、重新启动服务并用浏览器打开"><a href="#七、重新启动服务并用浏览器打开" class="headerlink" title="七、重新启动服务并用浏览器打开"></a>七、重新启动服务并用浏览器打开</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/hanjinfeng0309/PicBed/images_for_hexo/t2Mb1f.png" alt=""></p>
-<p>至此，hexo这个博客框架算是在本地搭建成功了，接下来就是把博客到github上去（或者你自己的服务器也行）。</p>
-<h3 id="八、把博客部署到github上去"><a href="#八、把博客部署到github上去" class="headerlink" title="八、把博客部署到github上去"></a>八、把博客部署到github上去</h3><p>1、新建一个仓库，仓库名：<code>github用户名.github.io</code>，<strong>一定要和你的github用户名一样才行！！！</strong></p>
-<p>2、新建好仓库后，先放一边，去<code>Blog</code>目录下安装一个部署插件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
-<p>3、编辑<code>_config.yml</code>，找到<code>deploy</code>一项</p>
-<p><img src="https://cdn.jsdelivr.net/gh/hanjinfeng0309/PicBed/images_for_hexo/t2Gplt.png" alt=""></p>
-<p>4、部署</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d(eploy)</span><br></pre></td></tr></table></figure>
-
-<p>访问：<code>&lt;username&gt;.github.io</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/hanjinfeng0309/PicBed/images_for_hexo/t2YadO.png" alt=""></p>
-<p><strong>搞定收工</strong></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/06/07/Archlinux%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -766,7 +562,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
+  <p class="site-author-name" itemprop="name">Han wei</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -806,7 +602,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Han wei</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
